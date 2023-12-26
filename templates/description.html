@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<head>
+    <title>description page</title>
+</head>
+
+<body>
+    <form action="{{problem.id}}/verdict" method="POST">
+        {%csrf_token%}
+        <div>
+            {{problem.description}}
+        </div>
+        <input type="radio" name="language" id = 'python' value = 'python'>
+        <label for = 'python' >python</label>
+        
+        <input type="radio" name="language" id = 'c++' value = 'c++'>
+        <label for = 'c++' >c++</label>
+        
+        <input type="radio" name="language" id = 'c' value = 'c'>
+        <label for = 'c' >c</label>
+        <br>
+        <textarea name = 'code' id="code" rows ='10' cols="40"></textarea>
+        <br>
+        <input type="submit">
+    </form>
+</body>
